@@ -1,0 +1,52 @@
+insert into users(userId,userName,email,phone,role,credit,lastLoggedIn)
+values(2526178,'Tom','Tom@gmail.com','9416345387','Member',0,'2022-06-05 01:00:06');
+
+insert into users(userId,userName,email,phone,role,lastLoggedIn)
+values(2526789,'Jerry','Jerry@gmail.com','9001678923','Admin','2022-10-01 01:00:00');
+
+insert into users(userId,userName,email,phone,role,lastLoggedIn)
+values(2290123,'Stiles','Stiles@gmail.com','986555001','Member','2022-11-01 12:00:00');
+
+insert into users(userId,userName,email,phone,role,credit,lastLoggedIn)
+values(2513444,'Joy','Joy@gmail.com','8989009157','Manager',1977,'2022-10-01 05:00:00');
+
+
+insert into MeetingRoom(roomName,seatingCapacity ,ratings,noOfRatings,costPerHour) values('02-100',12,4.0,22,35);
+insert into MeetingRoom(roomName,seatingCapacity ,ratings,noOfRatings,costPerHour) values('02-101',20,3.0,17,40);
+insert into MeetingRoom(roomName,seatingCapacity ,ratings,noOfRatings,costPerHour) values('02-102',5,2,1,35);
+insert into MeetingRoom(roomName,seatingCapacity ,ratings,noOfRatings,costPerHour) values('02-103',30,4.5,5,35);
+insert into MeetingRoom(roomName,seatingCapacity ,ratings,noOfRatings,costPerHour) values('01-100',30,4.5,5,35);
+insert into MeetingRoom(roomName,seatingCapacity ,ratings,noOfRatings,costPerHour) values('01-101',30,4.5,5,35);
+
+
+insert into RoomTypes(roomName,roomType) values('01-100','Classroom Training');
+insert into RoomTypes(roomName,roomType) values('01-101','Online Training');
+insert into RoomTypes(roomName,roomType) values('02-100','Conference Call');
+insert into RoomTypes(roomName,roomType) values('02-103','Business');
+
+
+insert into RoomAmenities(roomName ,roomAmenity ) values('01-101','Projector');
+insert into RoomAmenities(roomName ,roomAmenity ) values('01-101','Wifi Connection');
+insert into RoomAmenities(roomName ,roomAmenity ) values('01-101','Whiteboard');
+insert into RoomAmenities(roomName ,roomAmenity ) values('01-101','Water Dispenser');
+
+insert into RoomAmenities(roomName ,roomAmenity ) values('01-100','Wifi Connection');
+insert into RoomAmenities(roomName ,roomAmenity ) values('01-101','Projector');
+insert into RoomAmenities(roomName ,roomAmenity ) values('01-101','Water Dispenser');
+
+insert into RoomAmenities(roomName ,roomAmenity ) values('02-100','Wifi Connection');
+insert into RoomAmenities(roomName ,roomAmenity ) values('02-103','Conference Call');
+insert into RoomAmenities(roomName ,roomAmenity ) values('02-100','Coffee Machine');
+
+insert into RoomAmenities(roomName ,roomAmenity ) values('02-103','Projector');
+insert into RoomAmenities(roomName ,roomAmenity ) values('02-103','Coffee Machine');
+
+
+insert into BookingInfo(roomName,userId,date,startTime,endTime,isRated) values('02-103',2513444,'2022-10-14','12:00:00','13:00:00','No');
+
+
+insert into Meeting(bookingId,title,type,meetingInfo) values(1,'java meeting','Classroom Training','date-2022-10-14,roomName-02-102,startTime-13:00:00,endTime-15:00:00');
+
+
+insert into Attend(bookingId ,userId ) values(1,2290123); 
+insert into Attend(bookingId ,userId ) values(1,2513444);
